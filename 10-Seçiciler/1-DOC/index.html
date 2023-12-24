@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+
+
+    <h1 class="title" id="first-title">First Title</h1>
+    <h1 class="title" id="second-title">Second Title</h1>
+    <h1 class="title" id="third-title">Third Title</h1>
+
+
+    <h2 class="title2" id="first-title2">X-Title</h2>
+    <h2 class="title2" id="second-title2">X-Title</h2>
+    <h2 class="title2" id="third-title2">X-Title</h2>
+    <h2 class="title2" id="fourth-title2">X-Title</h2>
+    <h2 class="" id="fifth-title2">X-Title</h2>
+    <h2>y-Title</h2>
+    <h2></h2>
+    <h2></h2>
+
+    <div class="wrapper">
+        
+        <h1>Asabeneh Yetayeh challenges in 2020</h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>`
+        </ul>
+    </div>
+    <script>
+        const lists = `
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>`
+  const ul = document.querySelector('ul')
+  ul.innerHTML = lists
+  ul.innerHTML = ""; //kaldırmak icin
+
+
+
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+<!-- 
+
+getElementsByTagName(): bir etiket adını dize olarak alan bir parametre alır 
+ve bu yöntem bir HTMLCollection nesnesi döndürür. 
+HTMLCollection bir HTML elementlerinin array benzeri bir nesnesidir.
+ Uzunluk özelliği koleksiyonun boyutunu sağlar. Bu yöntemi kullandığımızda, 
+ index kullanarak veya her bir öğeyi tek tek geçerek bireysel elementlere erişiriz. 
+ HTMLCollection tüm dizi yöntemlerini desteklemez, 
+ bu yüzden forEach yerine düzenli for döngüsü kullanmalıyız.
+
+-->

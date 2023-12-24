@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 1. Etiket adını kullanarak document.querySelector(tagname) ile ilk paragrafı alın -->
+    <p id="first">First Paragraph</p>
+    <p id="second">Second Paragraph</p>
+    <p id="third">Third Paragraph</p>
+    <p id="fourth">Fourth Paragraph</p>
+
+    <script>
+        // 2. id'lerine göre document.querySelector('#id') kullanarak her bir paragrafı alın
+        var firstParagraph = document.querySelector("#first");
+        var secondParagraph = document.querySelector('#second');
+        var thirdParagraph = document.querySelector('#third');
+        var fourthParagraph = document.querySelector('#fourth');
+
+        // 3. Etiket adlarına göre document.querySelectorAll(tagname) kullanarak tüm p elemanlarını nodeList olarak alın
+        var allParagraphs = document.querySelectorAll('p');
+
+        // 4. nodeList içinde dolaşın ve her paragrafın metin içeriğini alın
+        allParagraphs.forEach(function(paragraph, index) {
+            console.log("Paragraph " + (index + 1) + ": " + paragraph.textContent);
+        });
+
+        // 5. Dördüncü paragrafta metin içeriği olarak "Fourth Paragraph" yerleştirin.
+        fourthParagraph.textContent = "Fourth";
+
+        // 6. Farklı özellik ayarlama yöntemlerini kullanarak tüm paragraflar için id ve sınıf özelliklerini ayarlayın
+        allParagraphs.forEach(function(paragraph, index) {
+            // Her paragrafa farklı bir id ve aynı sınıfı ata
+            paragraph.id = "paragraph" + (index + 1);
+            paragraph.classList.add("commonClass");
+        }); //ÖNEMLİ
+
+        allParagraphs.forEach((paragraph,index)=>{
+            paragraph.style.fontSize="16px";
+            if(index % 2 == 0){
+                paragraph.style.color ="red";
+            }
+            else{
+                paragraph.style.color="blue";
+            }
+            paragraph.style.background="16px"
+            if(index===0 || index===2){
+                paragraph.style.backgroundColor="green";
+            }
+            else{
+                paragraph.style.backgroundColor="yellow";
+            }
+        })
+
+        //. JavaScript kullanarak HTML element oluşturmak oldukça basittir
+        // . document.createElement() metodunu kullanırız. Bu metod bir HTML element etiket adını string olarak alır.
+        let title
+        for(let i=0;i<3;i++){
+            title=document.createElement("h1");
+            title.className="title";
+            title.style.fontSize="24px";
+            title.textContent="I'm a TITLE";
+            console.log(title);
+            document.body.appendChild(title)
+            /*her döngüde oluşturulan başlık, HTML dokümanındaki <body> elemanına ekleniyor.
+            Bu adım, oluşturulan başlıkları görünür hale getirir ve tarayıcıda sayfanın içeriği olarak gösterilmesini sağlar.
+            Bu şekilde, sayfanızdaki içerik dinamik bir şekilde oluşturulur ve her döngüde yeni bir başlık eklenir.*/
+                
+        }
+         
+    </script>
+    
+</body>
+</html>
