@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: "Ubuntu";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.mainContainer {
+    display: flex;
+    width: 90vw;
+}
+
+.container {
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    height: 80vh;
+    cursor: pointer;
+    border-radius: 20px;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    
+}
+
+.container.active{
+    flex: 1.7;
+}
+
+.container h1 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    margin: 0px;
+    left: 40%;
+    opacity: 0;
+}
+
+.container.active h1{
+    text-decoration: solid;
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.2s;
+
+}
+
+@media (max-width:600px){
+    .mainContainer{
+        width: 100vw;
+    }
+
+    .container:nth-of-type(5), .container:nth-of-type(6), .container:nth-of-type(7), .container:nth-of-type(8){
+        display: none;
+    }
+}

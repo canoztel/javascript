@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: blanchedalmond;
+        }
+        h1{
+           margin-left: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+       ul{
+        display: inline-block;;
+        list-style-type: none;
+        padding: 0;
+        justify-content: center;
+       }
+
+       li{
+        text-align: center;
+        width: 120px;
+        background-color: darkgoldenrod;
+        margin: 10px;
+        margin-left: 15px;
+        font-weight: 600;
+        border-radius: 20px ;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+      
+
+    </style>
+</head>
+
+<body>
+    <h1>Countries</h1>
+    <ul id="countries-list"></ul>
+
+    <script>
+
+        const countries = ["Albania", "Armenia", "Belarus", "Brazil", "Canada", "China", "Egypt"
+            , "Estonia", "France", "Hungary", "Iceland", "Italy", "Japan", "Korea", "Malta", "Mexico"
+            , "Netherlands", "Nigeria", "Paraguay", "Poland", "Senegal", "Spain", "Thailand", "Turkey"
+            , "Ukranie", "United States", "Venezuela", "Vietnam", "Zambia"];
+
+        // HTML içindeki ul elementini seç
+        const countriesList = document.getElementById("countries-list");
+
+        // Ülkeleri listele
+        countries.forEach(country => {
+
+            // Her bir ülke için li elementi oluştur
+            const listItem = document.createElement("li");
+
+            // li elementinin içeriğine ülke adını ekle
+            listItem.textContent = country;
+            // Oluşturulan li elementini ul içine ekle
+            countriesList.appendChild(listItem);
+
+
+            
+        });
+    </script>
+</body>
+
+</html>
